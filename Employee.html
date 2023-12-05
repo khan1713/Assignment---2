@@ -1,0 +1,71 @@
+<html>
+<head>
+<script>
+
+	class Employee
+	{
+		constructor()
+		{	
+			this.empNo = document.getElementById("txtEmpNo").value;
+			this.empName = document.getElementById("txtEmpName").value;
+			this.empSal = document.getElementById("txtEmpSal").value;
+		}
+		displayEmployee()
+		{	
+			var data = "<center>"
+			data += "<h1>Employee Information</h1>"
+			data += "<hr color ='red' width='50%'>"
+			data += "<font size ='6' color='blue'>"
+			data += "No is : " 	+ this.empNo;
+			data +="<br>Name is : " + this.empName;
+			data +="<br>Sal is : "  + this.empSal;
+			data += "</font><hr color ='red' width='50%'>"
+			data += "</center>"
+			var target = window.open("Employee1.html");
+			target.document.write(data);
+			
+		}
+	}
+</script>
+</head>
+<body>
+<header>
+<h1 style="color: whitesmoke;text-align: center">Welcome to Application</h1>
+</header>
+<style>
+	{
+      	  margin: 0px;
+      }
+	 header{
+                line-height: 80px;
+                background-color: navy;
+             }
+ 	 footer{
+                line-height: 40px;
+                background-color: black;
+		 }
+	footer{
+                line-height: 40px;
+                background-color: black;
+                color: white;
+                font-style: italic;
+                text-align: center;
+		}
+</style>
+<from>
+<center>
+<input type = "text" id ="txtEmpNo" placeholder = "emp no"><br><br>
+	<input type = "text" id ="txtEmpName" placeholder = "emp name"><br><br>
+	<input type = "text" id ="txtEmpSal" placeholder = "emp sal"><br><br>
+
+	<input type = "button" value = "submit" onclick = "new Employee().displayEmployee();">
+</center>
+<p id="msg"></p>	
+</from>
+<footer>
+            &CO
+            &COPY;opyright 2023 @Archer Industries
+        </footer>
+
+</body>
+</html>
